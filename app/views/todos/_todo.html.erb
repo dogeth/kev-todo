@@ -1,0 +1,9 @@
+<li>
+  <span <%= %q{class='complete'} if todo.complete? -%> ><%=h todo.title -%></span>
+  <%= link_to "delete", todo_path(todo), :method => :delete, :confirm =>'really?' -%>
+  <%if todo.complete? -%>
+    <%= link_to "undo", undo_todo_path(todo), :method => :put -%>
+  <%else %>
+    <%= link_to "done", done_todo_path(todo), :method => :put -%>
+  <%end%>
+</li>

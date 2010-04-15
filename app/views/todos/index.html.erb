@@ -1,0 +1,11 @@
+<%= error_messages_for :todo %>
+
+<% form_for @todo || Todo.new do |f| -%>
+  <%= f.label :title, "Todo" %>
+  <%= f.text_field :title %>
+  <%= f.submit "Add" %>
+<% end -%>
+
+<ol>
+  <%=render @todos %>
+</ol>
