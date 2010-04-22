@@ -1,0 +1,15 @@
+<h2><%= h @todo.title%></h2>
+<%= link_to "delete", todo_path(@todo), :method => :delete, :confirm =>'really?' -%>
+<% if @todo.complete? -%>
+  <%= link_to "undo", undo_todo_path(@todo), :method => :put -%>
+<% else %>
+  <%= link_to "done", done_todo_path(@todo), :method => :put -%>
+<% end%>
+<h3>Tags</h3>
+<span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+<% form_for @todo do |f| -%>
+  <%= f.label :new_tag, "Tag" %>
+  <%= f.text_field :new_tag %>
+  <%= f.submit "Add" %>
+<% end -%>
+

@@ -1,39 +1,57 @@
 class TodosController < ApplicationController
   include ApplicationHelper 
   
-  before_filter :find_item, :only => [:destroy, :done, :undo]
+  before_filter :find_item, :only => [:update, :show, :destroy, :done, :undo]
 
   
   def index
-    @todos = Todo.all(:order => "created_at desc")
+    if params[:tags]
+      @tag = Tag.find_by_name(params[:tags])
+      @todos = @tag.todos
+    else
+      @todos = Todo.all(:order => "created_at desc")
+    end
+    
+  end
+  
+  def show
   end
   
   def create
     @todo = Todo.create(params[:todo])
     @todo.user = current_user || 'unknown'
     save_item 'todo added'
+    redirect_to root_path
+  end
+  
+  def update
+    if @todo.update_attributes(params[:todo])
+      flash[:notice] = "Yippie, tag added"
+    else
+      flash.now[:error] = "Oops!"
+    end    
+    redirect_to(@todo)
   end
   
   def destroy
-    @todo = Todo.find(params[:id])
     if @todo.delete
       flash[:notice] = "Todo deleted"
-      redirect_to root_path
     else
-      flash.now[:error] = "Oops!"
-      @todos = Todo.all(:order => "created_at desc")
-      render :action => 'index'
+      flash[:error] = "Oops!"
     end    
+    redirect_to root_path
   end
   
   def done
     @todo.complete = true
     save_item 'todo done!'
+    redirect_to root_path
   end  
   
   def undo
     @todo.complete = false
     save_item 'todo undone!'
+    redirect_to root_path
   end  
 
 private
@@ -48,7 +66,6 @@ private
     else
       flash.now[:error] = "Oops!"
     end    
-    redirect_to root_path
   end
   
 end

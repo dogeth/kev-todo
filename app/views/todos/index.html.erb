@@ -1,5 +1,11 @@
 <%= error_messages_for :todo %>
 
+<% if @tag %>
+  <h2><%= @tag.name %></h2>
+<% else%>  
+  <h2>All</h2>
+<% end%>
+
 <% form_for @todo || Todo.new do |f| -%>
   <%= f.label :title, "Todo" %>
   <%= f.text_field :title %>

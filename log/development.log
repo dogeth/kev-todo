@@ -1784,3 +1784,1494 @@ Rendering todos/index
 Rendered todos/_todo (4.9ms)
 Rendered todos/_todo (5.2ms)
 Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-22 19:06:19) [GET]
+
+SyntaxError (/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:48: syntax error, unexpected kWHEN
+      when 0
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:50: syntax error, unexpected kWHEN, expecting kEND
+      when 1
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:69: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (104.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (18.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422093755')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("todos")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+Migrating to CreateTodoItemTags (20100422094017)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "todo_item_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_item_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422094017')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("todo_item_tags")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("todos")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+Migrating to CreateTodoItemTags (20100422094017)
+Migrating to CreateTodoTags (20100422095218)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "todo_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_todo_tags_on_tag_id" ON "todo_tags" ("tag_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table todo_tags has no column named todo_tags: CREATE INDEX "index_todo_tags_on_todo_tags" ON "todo_tags" ("todo_tags")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+Migrating to CreateTodoTags (20100422095218)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "todo_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_todo_tags_on_tag_id" ON "todo_tags" ("tag_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table todo_tags has no column named todo_tags: CREATE INDEX "index_todo_tags_on_todo_tags" ON "todo_tags" ("todo_tags")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "todo_item_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_item_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "todos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "user" varchar(255), "complete" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100422094017')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100415091206')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100422093755')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+Migrating to CreateTodoTags (20100422095218)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "todo_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_todo_tags_on_tag_id" ON "todo_tags" ("tag_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table todo_tags has no column named todo_tags: CREATE INDEX "index_todo_tags_on_todo_tags" ON "todo_tags" ("todo_tags")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTodos (20100415091206)
+Migrating to CreateTags (20100422093755)
+Migrating to CreateTodoTags (20100422095218)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "todo_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "todo_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_todo_tags_on_tag_id" ON "todo_tags" ("tag_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_todo_tags_on_todo_id" ON "todo_tags" ("todo_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100422095218')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("todo_item_tags")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("todo_tags")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_todo_tags_on_todo_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_todo_tags_on_tag_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("todos")[0m
+  [4;36;1mTag Create (0.5ms)[0m   [0;1mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('rails', '2010-04-22 09:58:26', '2010-04-22 09:58:26')[0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM "tags" [0m
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" [0m
+  [4;35;1mTodo Create (0.8ms)[0m   [0mINSERT INTO "todos" ("created_at", "title", "updated_at", "complete", "user") VALUES('2010-04-22 10:00:10', 'rails training', '2010-04-22 10:00:10', NULL, NULL)[0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT * FROM "tags" LIMIT 1[0m
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT * FROM "todos" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT * FROM "tags" LIMIT 1[0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM "tags" LIMIT 1[0m
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 1)) [0m
+  [4;35;1mTodo Load (0.5ms)[0m   [0mSELECT * FROM "todos" LIMIT 1[0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT * FROM "todos" LIMIT 1[0m
+  [4;36;1mTag Create (0.8ms)[0m   [0;1mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('Learn', '2010-04-22 10:14:59', '2010-04-22 10:14:59')[0m
+  [4;35;1mTodoTag Create (0.3ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(1, '2010-04-22 10:14:59', 2, '2010-04-22 10:14:59')[0m
+  [4;36;1mTodo Load (0.5ms)[0m   [0;1mSELECT * FROM "todos" LIMIT 1[0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT * FROM "tags" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM "tags" LIMIT 1[0m
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 1)) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM "tags" LIMIT 1[0m
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" LIMIT 1[0m
+  [4;35;1mTodoTag Create (0.8ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(1, '2010-04-22 10:15:55', 1, '2010-04-22 10:15:55')[0m
+  [4;36;1mTodo Load (0.4ms)[0m   [0;1mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 1)) [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-22 20:21:11) [GET]
+
+SyntaxError (/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:48: syntax error, unexpected kWHEN
+      when 0
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:50: syntax error, unexpected kWHEN, expecting kEND
+      when 1
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:69: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-22 20:21:43) [GET]
+
+SyntaxError (/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:48: syntax error, unexpected kWHEN
+      when 0
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:50: syntax error, unexpected kWHEN, expecting kEND
+      when 1
+          ^
+/Users/kev/code/mocra/kev-todo/app/controllers/todos_controller.rb:69: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:22:30) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (Missing template tags/_tag.erb in view path app/views) on line #11 of app/views/todos/_todo.html.erb:
+8:   <%end%>
+9:   
+10:   <ol>
+11:     <%=render todo.tags %>
+12:   </ol>
+13: </li>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/_todo.html.erb:11
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/index.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (70.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:26:44) [GET]
+  [4;36;1mTodo Load (0.6ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #10 of app/views/todos/_todo.html.erb:
+7:     <%= link_to "done", done_todo_path(todo), :method => :put -%>
+8:   <%end%>
+9:   
+10:   todo.tags.map { |tag| <%= link_to tag.name, root_path(:tags => tag.name) %> }.join(', ')
+11:   
+12: <!--   <ol>
+13:     <%=render todo.tags %>
+
+    app/views/todos/_todo.html.erb:10:in `tag'
+    app/views/todos/_todo.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/index.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (61.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:28:10) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #10 of app/views/todos/_todo.html.erb:
+7:     <%= link_to "done", done_todo_path(todo), :method => :put -%>
+8:   <%end%>
+9:   
+10:   todo.tags.map { |tag| <%= link_to tag.name, root_path(:tags => tag.name) %> }.join(', ')
+
+    app/views/todos/_todo.html.erb:10:in `tag'
+    app/views/todos/_todo.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/index.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:29:23) [GET]
+  [4;36;1mTodo Load (0.6ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (16.2ms)
+Completed in 57ms (View: 51, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:29:47) [GET]
+  [4;36;1mTodo Load (0.6ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (89.1ms)
+Completed in 104ms (View: 98, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:29:51) [GET]
+  Parameters: {"tags"=>"rails"}
+  [4;36;1mTodo Load (0.6ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (15.6ms)
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/?tags=rails]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:29:54) [GET]
+  Parameters: {"tags"=>"Learn"}
+  [4;36;1mTodo Load (0.6ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (15.3ms)
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/?tags=Learn]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:33:41) [GET]
+  Parameters: {"tags"=>"Learn"}
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'Learn') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 2)) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.3ms)
+Completed in 95ms (View: 17, DB: 1) | 200 OK [http://localhost/?tags=Learn]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:33:44) [GET]
+  Parameters: {"tags"=>"rails"}
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."name" = 'rails') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTodo Load (0.4ms)[0m   [0;1mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 1)) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (8.0ms)
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/?tags=rails]
+
+
+Processing TodosController#create (for 127.0.0.1 at 2010-04-22 20:33:49) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "todo"=>{"title"=>"fred"}}
+  [4;36;1mTodo Create (0.5ms)[0m   [0;1mINSERT INTO "todos" ("created_at", "title", "updated_at", "complete", "user") VALUES('2010-04-22 10:33:49', 'fred', '2010-04-22 10:33:49', NULL, NULL)[0m
+  [4;35;1mTodo Update (0.5ms)[0m   [0mUPDATE "todos" SET "updated_at" = '2010-04-22 10:33:49', "user" = 'unknown' WHERE "id" = 2[0m
+
+ActionView::MissingTemplate (Missing template todos/create.erb in view path app/views):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:34:37) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (13.4ms)
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (73.3ms)
+Completed in 99ms (View: 92, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:34:41) [GET]
+  Parameters: {"tags"=>"Learn"}
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."name" = 'Learn') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTodo Load (0.4ms)[0m   [0;1mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 2)) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.6ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/?tags=Learn]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:34:44) [GET]
+  Parameters: {"tags"=>"rails"}
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'rails') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 1)) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.4ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/?tags=rails]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:34:51) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (13.5ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (8.2ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:37:18) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+ERROR: compiling _run_erb_app47views47todos47index46html46erb RAISED compile error
+/Users/kev/code/mocra/kev-todo/app/views/todos/index.html.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+...utput_buffer.concat(( if @tag).to_s); @output_buffer.concat ...
+                              ^
+/Users/kev/code/mocra/kev-todo/app/views/todos/index.html.erb:18: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47todos47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( error_messages_for :todo ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( if @tag).to_s); @output_buffer.concat "\n  <h2>"
+; @output_buffer.concat(( @tag.name ).to_s); @output_buffer.concat "</h2>\n"
+;  else; @output_buffer.concat "  \n  <h2>All</h2>\n"
+
+;  end; @output_buffer.concat "\n\n"
+
+;  form_for @todo || Todo.new do |f| 
+@output_buffer.concat "  "; @output_buffer.concat(( f.label :title, "Todo" ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :title ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit "Add" ).to_s); @output_buffer.concat "\n"
+;  end 
+@output_buffer.concat "\n<ol>\n  "
+
+; @output_buffer.concat((render @todos ).to_s); @output_buffer.concat "\n</ol>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/kev/code/mocra/kev-todo/app/views/todos/index.html.erb:18:in `compile!'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.23/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kev/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kev/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kev/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kev/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.23/lib/sass/plugin/rails.rb:20:in `process'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/kev/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/kev/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/kev/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/kev/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/kev/code/mocra/kev-todo/app/views/todos/index.html.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+...utput_buffer.concat(( if @tag).to_s); @output_buffer.concat ...
+                              ^
+/Users/kev/code/mocra/kev-todo/app/views/todos/index.html.erb:18: syntax error, unexpected kENSURE, expecting $end) on line #3 of app/views/todos/index.html.erb:
+1: <%= error_messages_for :todo %>
+2: 
+3: <%= if @tag%>
+4:   <h2><%= @tag.name %></h2>
+5: <% else%>  
+6:   <h2>All</h2>
+
+    app/views/todos/index.html.erb:18:in `compile!'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:37:35) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (13.7ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (8.3ms)
+Completed in 111ms (View: 105, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:37:38) [GET]
+  Parameters: {"tags"=>"Learn"}
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'Learn') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 2)) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (6.5ms)
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/?tags=Learn]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:37:50) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1"}
+
+NoMethodError (undefined method `find_item' for #<TodosController:0x10355cf68>):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:42:09) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+
+NameError (undefined local variable or method `item' for #<TodosController:0x1032b00f8>):
+  app/controllers/todos_controller.rb:36:in `done'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (120.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:42:14) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (13.5ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.6ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:42:16) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"2"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+
+NameError (undefined local variable or method `item' for #<TodosController:0x103457b18>):
+  app/controllers/todos_controller.rb:36:in `done'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (113.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:42:42) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"2"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;36;1mTodo Update (0.4ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:42:42', "complete" = 't' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/todos/2/done]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:42:42) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (13.2ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.6ms)
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#undo (for 127.0.0.1 at 2010-04-22 20:42:45) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"2"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;36;1mTodo Update (0.3ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:42:45', "complete" = 'f' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/todos/2/undo]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:42:45) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 2)) [0m
+Rendered todos/_todo (81.1ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.7ms)
+Completed in 101ms (View: 94, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#destroy (for 127.0.0.1 at 2010-04-22 20:42:48) [DELETE]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"2"}
+  [4;36;1mTodo Load (0.4ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 2) [0m
+  [4;36;1mTodo Delete all (3.3ms)[0m   [0;1mDELETE FROM "todos" WHERE ("id" IN (2)) [0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 4) | 302 Found [http://localhost/todos/2]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:42:48) [GET]
+  [4;35;1mTodo Load (0.6ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (17.0ms)
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#create (for 127.0.0.1 at 2010-04-22 20:42:51) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "todo"=>{"title"=>"fred"}}
+  [4;35;1mTodo Create (0.4ms)[0m   [0mINSERT INTO "todos" ("created_at", "title", "updated_at", "complete", "user") VALUES('2010-04-22 10:42:51', 'fred', '2010-04-22 10:42:51', NULL, NULL)[0m
+  [4;36;1mTodo Update (0.5ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:42:51', "user" = 'unknown' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/todos]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:42:51) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (85.1ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.6ms)
+Completed in 105ms (View: 98, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:43:15) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"3"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;36;1mTodo Update (0.6ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:43:15', "complete" = 't' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/todos/3/done]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:43:15) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (15.7ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (7.8ms)
+Completed in 35ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#undo (for 127.0.0.1 at 2010-04-22 20:43:17) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"3"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;36;1mTodo Update (0.3ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:43:17', "complete" = 'f' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/todos/3/undo]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:43:17) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (87.5ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (8.0ms)
+Completed in 107ms (View: 101, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:47:05) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) on line #3 of app/views/todos/_todo.html.erb:
+1: <li>
+2:   <span <%= %q{class='complete'} if todo.complete? -%> >
+3:     <%= link_to h todo.title, todo -%>
+4:   </span>
+5:   <span><%= todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+6: </li>
+
+    app/views/todos/_todo.html.erb:3:in `h'
+    app/views/todos/_todo.html.erb:3
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/index.html.erb:16
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (61.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:47:07) [GET]
+  [4;35;1mTodo Load (0.8ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) on line #3 of app/views/todos/_todo.html.erb:
+1: <li>
+2:   <span <%= %q{class='complete'} if todo.complete? -%> >
+3:     <%= link_to h todo.title, todo -%>
+4:   </span>
+5:   <span><%= todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+6: </li>
+
+    app/views/todos/_todo.html.erb:3:in `h'
+    app/views/todos/_todo.html.erb:3
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/todos/index.html.erb:16
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (61.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:47:24) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (83.2ms)
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.4ms)
+Completed in 102ms (View: 95, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:47:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:48:20) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (9.3ms)
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.3ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:48:21) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering todos/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #1 of app/views/todos/show.html.erb:
+1: <h2><%= h @todo.title%></h2>
+2: 
+3: 
+4: 
+
+    app/views/todos/show.html.erb:1
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (124.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:49:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+
+ActionView::TemplateError (undefined local variable or method `todo' for #<ActionView::Base:0x1035aef70>) on line #6 of app/views/todos/show.html.erb:
+3: 
+4: 
+5: 
+6: <%= link_to "delete", todo_path(todo), :method => :delete, :confirm =>'really?' -%>
+7: <% if todo.complete? -%>
+8:   <%= link_to "undo", undo_todo_path(todo), :method => :put -%>
+9: <% else %>
+
+    app/views/todos/show.html.erb:6
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:49:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+
+ActionView::TemplateError (undefined local variable or method `todo' for #<ActionView::Base:0x103207ef8>) on line #6 of app/views/todos/show.html.erb:
+3: 
+4: 
+5: 
+6: <!-- <%= link_to "delete", todo_path(todo), :method => :delete, :confirm =>'really?' -%>
+7: <% if todo.complete? -%>
+8:   <%= link_to "undo", undo_todo_path(todo), :method => :put -%>
+9: <% else %>
+
+    app/views/todos/show.html.erb:6
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:50:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:50:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.3ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:50:15) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mTodo Update (0.4ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:50:15', "complete" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 98ms (DB: 1) | 302 Found [http://localhost/todos/1/done]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:50:15) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (9.3ms)
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.4ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:50:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#undo (for 127.0.0.1 at 2010-04-22 20:50:19) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1"}
+  [4;35;1mTodo Load (0.3ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;35;1mTodo Update (0.3ms)[0m   [0mUPDATE "todos" SET "updated_at" = '2010-04-22 10:50:19', "complete" = 'f' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/todos/1/undo]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:50:19) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (73.5ms)
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.8ms)
+Completed in 89ms (View: 82, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:50:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 20:50:21) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mTodo Update (0.3ms)[0m   [0;1mUPDATE "todos" SET "updated_at" = '2010-04-22 10:50:21', "complete" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/todos/1/done]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:50:21) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (8.8ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (4.0ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:50:23) [GET]
+  Parameters: {"tags"=>"Learn"}
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'Learn') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT "todos".* FROM "todos" INNER JOIN "todo_tags" ON "todos".id = "todo_tags".todo_id WHERE (("todo_tags".tag_id = 2)) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (2.4ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/?tags=Learn]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:50:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:51:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+
+ActionView::TemplateError (undefined local variable or method `todo' for #<ActionView::Base:0x10363a840>) on line #9 of app/views/todos/show.html.erb:
+6:   <%= link_to "done", done_todo_path(@todo), :method => :put -%>
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+
+    app/views/todos/show.html.erb:9
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:52:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Completed in 103ms (View: 96, DB: 1) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:54:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.3ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #10 of app/views/todos/show.html.erb:
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @tag do |t| -%>
+11:   <%= f.label :name, "Tag" %>
+12:   <%= f.text_field :name %>
+13:   <%= f.submit "Add" %>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (52.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:54:52) [GET]
+  [4;35;1mTodo Load (0.8ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (9.2ms)
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.5ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:54:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #10 of app/views/todos/show.html.erb:
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @tag do |t| -%>
+11:   <%= f.label :name, "Tag" %>
+12:   <%= f.text_field :name %>
+13:   <%= f.submit "Add" %>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:55:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (undefined method `tags_path' for #<ActionView::Base:0x1035bd340>) on line #10 of app/views/todos/show.html.erb:
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @tag || Tag.new do |t| -%>
+11:   <%= f.label :name, "Tag" %>
+12:   <%= f.text_field :name %>
+13:   <%= f.submit "Add" %>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:58:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (undefined method `tags_path' for #<ActionView::Base:0x103653980>) on line #10 of app/views/todos/show.html.erb:
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @tag || Tag.new do |t| -%>
+11:   <%= f.label :name, "Tag" %>
+12:   <%= f.text_field :name %>
+13:   <%= f.submit "Add" %>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (52.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 20:59:15) [GET]
+  [4;36;1mTodo Load (0.8ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (10.4ms)
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (3.5ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 20:59:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (undefined method `tags_path' for #<ActionView::Base:0x10361afb8>) on line #10 of app/views/todos/show.html.erb:
+7: <% end%>
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @tag || Tag.new do |t| -%>
+11:   <%= f.label :name, "Tag" %>
+12:   <%= f.text_field :name %>
+13:   <%= f.submit "Add" %>
+
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (121.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:00:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.3ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x1035d7c40>) on line #11 of app/views/todos/show.html.erb:
+8: <h3>Tags</h3>
+9: <span><%= @todo.tags.map { |tag| link_to tag.name, root_path(:tags => tag.name) }.join(', ') -%></span>
+10: <% form_for @todo do |t| -%>
+11:   <%= f.label :new_tag, "Tag" %>
+12:   <%= f.text_field :new_tag %>
+13:   <%= f.submit "Add" %>
+14: <% end -%>
+
+    app/views/todos/show.html.erb:11
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:208:in `form_for'
+    app/views/todos/show.html.erb:10
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (127.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:00:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Completed in 32ms (View: 25, DB: 1) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:00:45) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"asdf"}}
+
+ActionController::UnknownAction (No action responded to update. Actions: create, current_user, destroy, done, index, show, and undo):
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:01:55) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"asdf"}}
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/todos_controller.rb:28:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:02:49) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"asdf"}}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Redirected to http://localhost:3000/todos/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:02:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:04:25) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"asdf"}}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+
+NoMethodError (undefined method `add_tag=' for #<Todo:0x10355fa60>):
+  app/controllers/todos_controller.rb:28:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (39.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:06:09) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"asdf"}}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'asdf') LIMIT 1[0m
+  [4;35;1mTag Create (0.4ms)[0m   [0mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('asdf', '2010-04-22 11:06:09', '2010-04-22 11:06:09')[0m
+  [4;36;1mTodoTag Create (0.3ms)[0m   [0;1mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(1, '2010-04-22 11:06:09', 3, '2010-04-22 11:06:09')[0m
+Redirected to http://localhost:3000/todos/1
+Completed in 109ms (DB: 1) | 302 Found [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:06:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:06:14) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"1", "todo"=>{"new_tag"=>"newtag"}}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'newtag') LIMIT 1[0m
+  [4;35;1mTag Create (0.4ms)[0m   [0mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('newtag', '2010-04-22 11:06:14', '2010-04-22 11:06:14')[0m
+  [4;36;1mTodoTag Create (0.2ms)[0m   [0;1mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(1, '2010-04-22 11:06:14', 4, '2010-04-22 11:06:14')[0m
+Redirected to http://localhost:3000/todos/1
+Completed in 27ms (DB: 1) | 302 Found [http://localhost/todos/1]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:06:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Completed in 95ms (View: 88, DB: 1) | 200 OK [http://localhost/todos/1]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:06:20) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (9.6ms)
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (4.2ms)
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:13:45) [GET]
+  [4;36;1mTodo Load (0.7ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (8.5ms)
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (4.5ms)
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:13:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Completed in 92ms (View: 85, DB: 1) | 200 OK [http://localhost/todos/3]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:13:52) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"3", "todo"=>{"new_tag"=>"freddy"}}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'freddy') LIMIT 1[0m
+  [4;35;1mTag Create (0.4ms)[0m   [0mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('freddy', '2010-04-22 11:13:52', '2010-04-22 11:13:52')[0m
+  [4;36;1mTodoTag Create (0.2ms)[0m   [0;1mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(3, '2010-04-22 11:13:52', 5, '2010-04-22 11:13:52')[0m
+
+NameError (undefined local variable or method `message' for #<TodosController:0x103685e80>):
+  app/controllers/todos_controller.rb:29:in `update'
+  haml (2.2.23) lib/sass/plugin/rails.rb:20:in `process'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:14:21) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"3", "todo"=>{"new_tag"=>"freddy"}}
+  [4;35;1mTodo Load (0.2ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'freddy') LIMIT 1[0m
+  [4;35;1mTodoTag Create (0.5ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(3, '2010-04-22 11:14:21', 5, '2010-04-22 11:14:21')[0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'freddy') LIMIT 1[0m
+  [4;35;1mTodoTag Create (0.4ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(3, '2010-04-22 11:14:21', 5, '2010-04-22 11:14:21')[0m
+Redirected to http://localhost:3000/todos/3
+Completed in 113ms (DB: 2) | 302 Found [http://localhost/todos/3]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:14:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/todos/3]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:14:32) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"3", "todo"=>{"new_tag"=>"ddd"}}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."name" = 'ddd') LIMIT 1[0m
+  [4;36;1mTag Create (0.4ms)[0m   [0;1mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('ddd', '2010-04-22 11:14:32', '2010-04-22 11:14:32')[0m
+  [4;35;1mTodoTag Create (0.2ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(3, '2010-04-22 11:14:32', 6, '2010-04-22 11:14:32')[0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."name" = 'ddd') LIMIT 1[0m
+  [4;35;1mTodoTag Create (0.4ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(3, '2010-04-22 11:14:32', 6, '2010-04-22 11:14:32')[0m
+Redirected to http://localhost:3000/todos/3
+Completed in 34ms (DB: 2) | 302 Found [http://localhost/todos/3]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:14:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Completed in 97ms (View: 90, DB: 1) | 200 OK [http://localhost/todos/3]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:14:40) [GET]
+  [4;36;1mTodo Load (0.8ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (13.5ms)
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (2.6ms)
+Completed in 30ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:14:55) [GET]
+  [4;35;1mTodo Load (0.7ms)[0m   [0mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (11.7ms)
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (2.6ms)
+Completed in 28ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TodosController#create (for 127.0.0.1 at 2010-04-22 21:15:02) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "todo"=>{"title"=>"asdf asdf"}}
+  [4;36;1mTodo Create (0.4ms)[0m   [0;1mINSERT INTO "todos" ("created_at", "title", "updated_at", "complete", "user") VALUES('2010-04-22 11:15:02', 'asdf asdf', '2010-04-22 11:15:02', NULL, NULL)[0m
+  [4;35;1mTodo Update (0.5ms)[0m   [0mUPDATE "todos" SET "updated_at" = '2010-04-22 11:15:02', "user" = 'unknown' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/todos]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:15:02) [GET]
+  [4;36;1mTodo Load (0.8ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 4)) [0m
+Rendered todos/_todo (8.9ms)
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (4.7ms)
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (2.8ms)
+Completed in 29ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:15:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 4)) [0m
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/todos/4]
+
+
+Processing TodosController#update (for 127.0.0.1 at 2010-04-22 21:15:11) [PUT]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"4", "todo"=>{"new_tag"=>"sdfsw"}}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 4) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."name" = 'sdfsw') LIMIT 1[0m
+  [4;36;1mTag Create (0.4ms)[0m   [0;1mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES('sdfsw', '2010-04-22 11:15:11', '2010-04-22 11:15:11')[0m
+  [4;35;1mTodoTag Create (0.2ms)[0m   [0mINSERT INTO "todo_tags" ("todo_id", "created_at", "tag_id", "updated_at") VALUES(4, '2010-04-22 11:15:11', 7, '2010-04-22 11:15:11')[0m
+Redirected to http://localhost:3000/todos/4
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/todos/4]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2010-04-22 21:15:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering todos/show
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 4)) [0m
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/todos/4]
+
+
+Processing TodosController#done (for 127.0.0.1 at 2010-04-22 21:15:18) [PUT]
+  Parameters: {"authenticity_token"=>"cCyEvbGYRHADDrOEIYQdgSQiPZur7onj6iCWObNqqNA=", "id"=>"4"}
+  [4;36;1mTodo Load (0.2ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."id" = 4) [0m
+  [4;35;1mTodo Update (0.3ms)[0m   [0mUPDATE "todos" SET "updated_at" = '2010-04-22 11:15:18', "complete" = 't' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/todos/4/done]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2010-04-22 21:15:18) [GET]
+  [4;36;1mTodo Load (0.8ms)[0m   [0;1mSELECT * FROM "todos" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering todos/index
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 4)) [0m
+Rendered todos/_todo (11.4ms)
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 3)) [0m
+Rendered todos/_todo (2.9ms)
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "todo_tags" ON "tags".id = "todo_tags".tag_id WHERE (("todo_tags".todo_id = 1)) [0m
+Rendered todos/_todo (2.5ms)
+Completed in 29ms (View: 22, DB: 2) | 200 OK [http://localhost/]
